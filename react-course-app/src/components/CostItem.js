@@ -1,12 +1,16 @@
 import "./CostItem.css";
 
 function CostItem() {
+  const costDate = new Date(2021, 2, 12);
+  const costDescription = "Телевизор";
+  const costAmount = 400.99;
+
   return (
     <div className="cost-item">
-      <div>Март 2021 12</div>
+      <div>{costDate.toISOString()}</div>
       <div className="cost-item__description">
-        <h2>Телевизор</h2>
-        <div className="cost-item__price">400$</div>
+        <h2>{costDescription}</h2>
+        <div className="cost-item__price">${costAmount}</div>
       </div>
     </div>
   );
