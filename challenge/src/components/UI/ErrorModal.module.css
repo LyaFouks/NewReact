@@ -14,7 +14,8 @@
   left: 10%;
   width: 70%;
   z-index: 100;
-  overflow: hidden;
+  overflow: visible;
+  background: white;
 }
 
 .header {
