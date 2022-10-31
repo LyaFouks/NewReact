@@ -1,7 +1,7 @@
 import Card from "../UI/Card";
 import styles from "./CreateUser.module.css";
 import Button from "../UI/Button";
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import ErrorModal from "../UI/ErrorModal";
 
 const CreateUser = (props) => {
@@ -44,7 +44,7 @@ const CreateUser = (props) => {
   };
 
   return (
-    <div>
+    <Fragment>
       {error && (
         <ErrorModal
           onCloseModal={errorHandler}
@@ -79,7 +79,7 @@ const CreateUser = (props) => {
           </div>
         </form>
       </Card>
-    </div>
+    </Fragment>
   );
 };
 
