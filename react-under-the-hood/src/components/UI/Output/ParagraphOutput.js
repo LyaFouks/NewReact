@@ -1,4 +1,5 @@
 import Paragraph from "./Paragraph";
+import React from "react";
 
 const ParagraphOutput = (props) => {
   console.log("ParagraphOutput component");
@@ -6,4 +7,4 @@ const ParagraphOutput = (props) => {
   return <Paragraph>{props.isShown ? "New paragraph" : ""}</Paragraph>;
 };
 
-export default ParagraphOutput;
+export default React.memo(ParagraphOutput);
