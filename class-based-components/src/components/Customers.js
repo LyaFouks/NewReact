@@ -10,7 +10,18 @@ constructor() {
   super();
   this.state = {
     showCustomers: true,
-    someSatte: 'Foo',
+    someState: 'Foo',
+  };
+}
+
+componentDidUpdate() {
+  // try {
+  //   someCodeWithPotentialError();
+  // } catch {
+  //   // Обработка ошибки
+  // }
+  if (this.props.customers.length === 0) {
+    throw new Error("Нет заказчиков!")
   };
 }
 
